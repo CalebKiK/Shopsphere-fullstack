@@ -1,4 +1,4 @@
-.electronics-section {
+  .electronics-section {
     background-color: #F8F0E8;
     border-radius: 20px;
     padding: 40px 20px;
@@ -153,3 +153,9 @@
     }
   }
   
+  @media (max-width: 450px) {
+    .electronics-section {
+      padding: 40px 10px;
+      margin: 30px 10px;
+    }
+  }

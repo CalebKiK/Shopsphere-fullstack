@@ -4,25 +4,19 @@
 
 /* Main Container for All Items */
 .containers {
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   margin: 30px auto; 
   border-radius: 20px;
-  width: 90%;
   max-width: 1200px; 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  padding: 20px;
 }
 
 /* Individual Book and Artwork Containers */
-.book-container, 
-.artwork-container {
-  width: 100%; 
+.book-container, .artwork-container {
+  max-width: 1200px; 
   background-color: #f8f0e8;
   padding: 20px; 
-  border-radius: 10px;
-  margin: 1px 25px; 
+  border-radius: 10px; 
   text-align: left;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
@@ -95,4 +89,42 @@
 .subhead {
   margin-bottom: 0px;
   font-size: 15px;
+}
+
+@media(max-width: 768px) {
+  .containers {
+    display: block;
+    justify-content: space-between;
+    margin: 30px 10px;  
+  }
+
+  .book-container, .artwork-container {
+    padding: 20px; 
+    margin-top: 30px;
+
+  }
+
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 450px) {
+  .containers {
+    display: block;
+    justify-content: space-between;
+    margin: 30px 10px;  
+  }
+
+  .book-container, .artwork-container {
+    padding: 20px; 
+    margin-top: 30px;
+
+  }
+
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

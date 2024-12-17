@@ -5,9 +5,6 @@
   padding: 40px 20px;
   color: #1a1515;
   text-align: left;
-  
-  
-  
 }
 
 .footer-container {
@@ -30,16 +27,25 @@
 .title{
 width: 300px;
 color: white;
-font-size: 50px !important;
-margin-top: 60px !important;
+font-size: 50px ;
+margin-top: 60px;
 height: 0 !important;
 font-family: URW Chancery L, cursive;
+}
+
+.footer h3 {
+  font-size: 50px;
+  font-weight: bolder;
 }
 
 .footer h4 {
   font-size: 28px;
   margin-bottom: 15px;
   font-weight: bolder;
+}
+
+.footer-details-mobile{
+  display: none;
 }
 
 
@@ -94,5 +100,45 @@ font-family: URW Chancery L, cursive;
   border-top: 1px solid #646161;
   margin: 0;
   color: #1a1515;
+}
+
+@media (max-width: 450px) {
+  .footer-container {
+    display: block;
+    padding: 10px;
+  }
+
+  .title{
+    margin-top: 20px;
+  }
+
+  .footer h3 {
+    font-size: 35px;
+    font-weight: bolder;
+  }
+
+  .footer h4 {
+    font-size: 20px;
+  }
+
+  .footer-details{
+    display: none;
+  }
+
+  .footer-details-mobile{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 50px;
+  }
+
+  .footer-details-mobile .footer-support{
+    width: 400px;
+    margin-left: -40px;
+  }
+
+  .footer-support{
+    margin-left: -20px;
+  }
+  
 }
 
