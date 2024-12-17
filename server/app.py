@@ -10,7 +10,6 @@ from functools import wraps
 from flask_cors import CORS
 
 
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://groupthree:group3@localhost/shopsphere_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -255,15 +254,6 @@ def delete_user(id):
             db.session.rollback()
             return jsonify({'error': str(e)}), 500
     return jsonify({'error': 'User not found'}), 404
-
-# Additional category and item-related routes
-# @app.route("/api/clothes", methods=["GET"])
-# def display_clothes():
-#     clothes = Item.query.filter(Item.category == "Clothes").all()
-#     if not clothes:
-#         return jsonify({"message": "No clothes available currently."}), 404
-#     return jsonify([item_serializer(clothes_item) for clothes_item in clothes]), 200
-
 
 class Clothes(Resource):
     def get(self):
