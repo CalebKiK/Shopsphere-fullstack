@@ -84,8 +84,6 @@ function App() {
       <ShoesSection cart={cart} onAddToCart={handleAddToCart} onRemoveFromCart={handleRemoveFromCart} />
       <ElectronicsSection cart={cart} onAddToCart={handleAddToCart} onRemoveFromCart={handleRemoveFromCart} />
       
-      <ProductList products={products} onAddToCart={handleAddToCart} />
-      
       <FAQ />
       <Footer />
 

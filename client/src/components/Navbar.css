@@ -257,3 +257,14 @@ a:hover {
   margin-top: 10px;
   text-align: center;
 }
+
+@media (max-width: 450px) {
+  .shopsphere-header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .shopsphere-header-left-section h2{
+    font-size: 25px;
+  }
+}

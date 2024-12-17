@@ -69,8 +69,14 @@
 }
 
 .whats-new{
-  margin: 30px 375px 30px;
+  margin: 30px auto;
   background-color: #F8F0E8;
   padding: 30px;
   border-radius: 10px;
+}
+
+@media(max-width: 450px) {
+  .whats-new{
+    margin: 30px 10px;
+  }
 }

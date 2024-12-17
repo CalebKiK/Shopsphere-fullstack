@@ -43,12 +43,15 @@ function FlashSale({ flashSaleItems, cart, onAddToCart, onRemoveFromCart }) {
     <div className="flash-sale-container">
       <div className="flash-sale-header">
         <h2>Flash Sale</h2>
-        <p>Ends in:</p>
-        <div className="timer">
-          {timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours} hrs :{" "}
-          {timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes} mins :{" "}
-          {timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds} secs
+        <div className="flashsale-timer">
+          <p>Ends in:</p>
+          <div className="timer">
+            {timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours} hrs :{" "}
+            {timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes} mins :{" "}
+            {timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds} secs
+          </div>
         </div>
+        
       </div>
 
       <div className="flash-sale-items">
