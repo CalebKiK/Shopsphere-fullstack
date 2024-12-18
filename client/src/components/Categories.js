@@ -28,8 +28,6 @@ function Categories()   {
         return <Artwork />;
       case "Books":
         return <Book />;
-      default:
-        return <p>Please select a category.</p>;
     }
   };
 
@@ -43,7 +41,7 @@ function Categories()   {
             className={`category-item ${activeCategory === category ? 'active' : ''}`}
             onClick={() => handleCategoryClick(category)}
           >
-            {category} <span className="dropdown-icon">▼</span>
+            {category}
           </div>
         ))}
       </div>

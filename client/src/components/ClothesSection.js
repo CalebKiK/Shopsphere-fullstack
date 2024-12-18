@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ClothesSection.css';
+import ItemCard from './ItemCard';
 
 const ClothesSection = ({ cart=[], onAddToCart, onRemoveFromCart }) => {
   const [ClothesData, setClothesData] = useState([]);
@@ -12,43 +13,13 @@ const ClothesSection = ({ cart=[], onAddToCart, onRemoveFromCart }) => {
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
-  const handleCartClick = (item) => {
-    if(cart.includes(item.id)){
-      onRemoveFromCart(item.id)
-    } else {
-      onAddToCart(item)
-    };
-  }
-
-  const formatCurrency = (amount) => {
-    const formatter = new Intl.NumberFormat('en-KE', {
-      style: 'currency',
-      currency: 'KES',
-    });
-    return formatter.format(amount);
-  };
-
   // Modify
   return (
-    <div className="Clothes-section">
+    <div className="clothes-section">
       <h2>Clothes</h2>
-      <div className="Clothes-grid">
-        {ClothesData.map((Clothes) => (
-          <div key={Clothes.id} className="Clothes-card">
-            <div className="image-placeholder">
-              <img src={Clothes.image_url} alt={Clothes.item_name} />
-            </div>
-            <div className="Clothes-details">
-              <p className="description">{Clothes.item_name}</p>
-              {/* <p className="description">{Clothes.description}</p> */}
-              <p className="price">
-                {formatCurrency(Clothes.price)} 
-                {/* <span className="original-price">{formatCurrency(Clothes.originalPrice)}</span> */}
-              </p>
-              <div className='items_available'><p>Items available: {Clothes.items_available}</p></div>
-              <button className="add-to-cart" onClick={() => handleCartClick(Clothes)}>{cart.includes(Clothes.id) ? "Remove From Cart" : "Add To Cart"}</button>
-            </div>
-          </div>
+      <div className="clothes-grid">
+        {ClothesData.map((item) => (
+          <ItemCard key={item.id} item={item} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart} inCart={cart.includes(item)} />
         ))}
       </div>
       

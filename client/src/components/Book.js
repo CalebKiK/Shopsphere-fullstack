@@ -14,7 +14,7 @@ const Book = ({ cart=[], onAddToCart, onRemoveFromCart }) => {
   // Modify
   return (
     <div className="book-container">
-      <h4 className='subhead'>Books</h4>
+      <h2>Books</h2>
       <div className="items-grid">
         {books.map(book => (
           <ItemCard key={book.id} item={book} onAddToCart={onAddToCart} onRemoveFromCart={onRemoveFromCart} inCart={cart.includes(book)} />

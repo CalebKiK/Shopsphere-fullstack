@@ -1,4 +1,12 @@
 /* Styles for the main container */
+.whats-new{
+  padding: 20px;
+  background-color: #F8F0E8; /* Background color for the section */
+  margin: 30px 160px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .WhatsNew-section {
   padding: 20px;
   background-color: #F8F0E8; /* Background color for the section */
@@ -14,7 +22,7 @@
 /* Grid layout for new product items */
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
@@ -66,13 +74,6 @@
   text-align: left;
   align-items: end;
   font-weight: 400;
-}
-
-.whats-new{
-  margin: 30px auto;
-  background-color: #F8F0E8;
-  padding: 30px;
-  border-radius: 10px;
 }
 
 @media(max-width: 450px) {

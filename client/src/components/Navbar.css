@@ -4,11 +4,9 @@
   color: white;
   padding-left: 100px;
   padding-right: 15px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +17,6 @@
 
 .shopsphere-header-left-section {
   width: 180px;
-  font-size: 100px;
 }
 
 .shopsphere-header-left-section h2{
@@ -27,10 +24,12 @@
   font-weight: 700;
 }
 
-@media (max-width: 800px) {
-  .shopsphere-header-left-section {
-    width: unset;
-  }
+.shopsphere-header-middle-section {
+  flex: 1;
+  max-width: 850px;
+  margin-left: 200px;
+  margin-right: 10px;
+  display: flex;
 }
 
 .header-link {
@@ -52,38 +51,20 @@
   margin-left: 0.3rem;
 }
 
-@media (max-width: 575px) {
-  .shopsphere-logo {
-    display: none;
-  }
-
-  .shopsphere-mobile-logo {
-    display: block;
-    height: 35px;
-    margin-top: 5px;
-  }
-}
-
-.shopsphere-header-middle-section {
-  flex: 1;
-  max-width: 850px;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: flex;
-}
-
 .search-bar {
   flex: 1;
-  width: 750px;
+  width: 400px;
   font-size: 16px;
   padding-top: 5px;
   height: 40px;
-  padding-left: 300px;
+  padding-left: 20px;
   border: none;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.search-bar::placeholder{
+  color: #8f8f8f;
+  margin-top: -5px;
 }
 
 .search-button {
@@ -91,7 +72,7 @@
   border: none;
   width: 75px;
   height: 40px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 15px 15px 0px;
   flex-shrink: 0;
 }
 
@@ -100,34 +81,34 @@
   margin-top: -7px;
 }
 
-/* .search-results{
-
-} */
-
 .shopsphere-header-right-section {
-  width: 300px; /* Increased width to accommodate new buttons */
+  width: 350px;
   flex-shrink: 0;
   display: flex;
-  margin-right: 80px;
+  margin-right: 70px;
   margin-left: -60px;
   align-items: center; /* Center items vertically */
   justify-content: space-between; /* Space items horizontally */
 }
 
 .cart-link {
-  color: white;
+  color: rgb(23, 1, 1);
+  background-color: rgb(230, 210, 185);
   display: flex;
+  padding: 0px 20px;
   align-items: center;
   position: relative;
-  margin-right: 1.7rem;
+  margin-right: 20px;
+  height: 40px;
+  border-radius: 20px;
 }
 
 .cart-icon {
-  width: 50px;
+  width: 40px;
 }
 
 .cart-text {
-  margin-top: 12px;
+  margin-top: 0px;
   font-size: 15px;
   font-weight: 700;
 }
@@ -136,11 +117,9 @@
   color: rgb(240, 136, 4);
   font-size: 16px;
   font-weight: 700;
-
   position: absolute;
   top: 0px;
-  left: 17px;
-
+  left: 30px;
   width: 26px;
   text-align: center;
 }
@@ -163,7 +142,7 @@
   transition: background-color 0.3s ease;
 }
 
-.signup-button:hover, .help-button:hover {
+.signup-button:hover, .help-button:hover, .cart-link:hover {
   background-color: rgb(252, 195, 125); /* Darker shade on hover */
 }
 
@@ -226,8 +205,8 @@ button {
   width: 70%;
   padding: 10px;
   border: none;
-  border-radius: 4px;
-  background-color: #d6d9db;
+  border-radius: 10px;
+  /* background-color: #f3f3f4; */
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -256,6 +235,24 @@ a:hover {
   font-size: 14px;
   margin-top: 10px;
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .shopsphere-header-left-section {
+    width: unset;
+  }
+}
+
+@media (max-width: 575px) {
+  .shopsphere-logo {
+    display: none;
+  }
+
+  .shopsphere-mobile-logo {
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+  }
 }
 
 @media (max-width: 450px) {

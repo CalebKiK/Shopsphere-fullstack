@@ -1,4 +1,5 @@
 import React from 'react';
+import './ItemCard.css';
 
 const ItemCard = ({ item, onAddToCart, onRemoveFromCart, inCart }) => {
 
@@ -15,7 +16,6 @@ const ItemCard = ({ item, onAddToCart, onRemoveFromCart, inCart }) => {
     <div className="item-card">
       <img src={item.image_url} alt={item.item_name} />
       <h4>{item.item_name}</h4>
-      <p>{item.description}</p>
       <p>ksh {item.price}</p>
       <div className='items_available'><p>Items available: {item.items_available}</p></div>
       <button onClick={handleCartClick}>{inCart ? "Remove From Cart" : "Add To Cart"}</button>
