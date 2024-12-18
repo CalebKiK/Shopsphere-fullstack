@@ -187,6 +187,53 @@ const Navbar = ({ cart, setCart }) => {
         </div>
       </div>
 
+      <div className="shopsphere-header-mobile">
+        <div className="shopsphere-header-left-section">
+          <h2>SHOPSPHERE</h2>
+        </div>
+
+        <div className="shopsphere-header-right-section">
+          <button className="cart-link" onClick={viewCart}>
+            <img className="cart-icon" src={cartIcon} alt="Cart Icon" />
+            <div className="cart-quantity">{cart.length}</div>
+            <div className="cart-text">Cart</div>
+          </button>
+
+          <button className="signup-button" onClick={handleAuthButtonClick}>
+            {isLoggedIn ? 'Log Out' : 'Sign In'}
+          </button>
+
+          {isLoggedIn && userProfile && (
+            <div className="user-profile">
+              <span>Welcome, {userProfile.name}!</span>
+            </div>
+          )}
+
+          {isLoggedIn && role === 'admin' && (
+            <button className="admin-button">Admin Panel</button>
+          )}
+
+          {isLoggedIn && (
+            <button className="delete-account-button" onClick={handleDeleteAccount} style={{ backgroundColor: 'red', color: 'white' }}>
+              Delete Account
+            </button>
+          )}
+
+          <button className="help-button" onClick={toggleHelpModal}>
+            Help
+          </button>
+        </div>
+        
+        <div className="shopsphere-header-middle-section">
+          <form onSubmit={handleSearch}>
+            <input className="search-bar" type="text" placeholder="Search" value={searchTerm} onChange={handleSearchInputChange} />
+            <button className="search-button" type="submit">
+              <img className="search-icon" src={searchIcon} alt="Search Icon" />
+            </button>
+          </form>
+        </div>
+      </div>
+
       <div className="search-results">
         {searchResults.length > 0 ? (
           <ul>
@@ -205,12 +252,16 @@ const Navbar = ({ cart, setCart }) => {
       {/* Conditional rendering for sign-in form */}
       {showSignInForm && (
         <div className="sign-in-modal">
-          <form onSubmit={handleSignIn}>
+          <form className="signin-form" onSubmit={handleSignIn}>
+            <div className="signin-form-header">
+              <h3>Sign In/Sign up</h3>
+              <button className="signin-form-close" type="button" onClick={() => setShowSignInForm(false)}>x</button>
+            </div>
             <input type="email" name="email" placeholder="Email" required />
             <input type="password" name="password" placeholder="Password" required />
-            <button type="submit">Sign In</button>
+            <button className="signin-form-signin" type="submit">Sign In</button>
             {signInError && <p className="error">{signInError}</p>}
-            <button type="button" onClick={() => setShowSignInForm(false)}>Close</button>
+            
           </form>
         </div>
       )}

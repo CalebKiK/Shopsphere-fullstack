@@ -32,6 +32,7 @@
   font-size: 25px;
   font-weight: 700;
   text-align: left;
+  margin-left: 20px;
 }
 
 .hot-in-category-container h2 {
@@ -199,6 +200,66 @@
   .flash-sale-header p{
     margin-left: -120px;
     padding-top: -10px;
+  }
+
+  .hot-in-category-card {
+    padding: 10px; 
+    height: 320px; 
+    width: 160px;
+    border-radius: 10px; 
+  }
+
+  .flash-sale-card {
+    padding: 10px; 
+    height: 340px;
+    width: 160px;
+    border-radius: 10px; 
+  }
+  
+  /* Image Styles */
+  .flash-sale-card img, .hot-in-category-card img {
+    height: 130px;
+    min-width: 120px;
+    max-width: 140px;
+    
+  }
+  
+  /* Text and Price Styles */
+  .flash-sale-card h4, .hot-in-category-card h4 {
+    font-weight: 600;
+  }
+  
+  .flash-sale-prices, .hot-in-category-prices{
+    display: block;
+    margin-top: 0px;
+    color: #C15F08;
+  
+  }
+  
+  .flash-sale-prices p, .hot-in-category-prices p{
+    margin: 5px 10px 5px 0px;
+    color: black;
+  }
+  
+  .flash-sale-prices span, .hot-in-category-prices span{
+    font-size: 15px;
+    margin-left: 0px;
+  }
+  
+  .items_available p{
+    margin-top: -5px;
+    font-size: 13px;
+    text-align: left;
+    align-items: end;
+  }
+  
+  /* Button Styles */
+  .flash-sale-card button, .hot-in-category-card button {
+    font-size: 14px;
+  }
+  
+  .flash-sale-card button:hover, .hot-in-category-card button:hover {
+    padding: 5px 10px;
   }
 }
 

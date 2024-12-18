@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/Categories.css';
-
 import ElectronicsSection from '../ElectronicsSection';
 import ShoesSection from '../ShoesSection';
 import Artwork from './Artwork';
@@ -28,6 +27,8 @@ function Categories()   {
         return <Artwork />;
       case "Books":
         return <Book />;
+      default:
+        return <p></p>;
     }
   };
 

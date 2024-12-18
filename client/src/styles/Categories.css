@@ -26,7 +26,27 @@
   background-color: #edd4c0; /* Slightly darker shade on hover */
 }
 
-.dropdown-icon {
-  margin-left: 8px;
-  font-size: 12px;
+@media (max-width: 450px) {
+  .categories-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin: 90px 80px 0px;
+    padding: 10px;
+    max-width: 50%;
+  }
+  
+  .category-item {
+    background-color: rgba(223, 116, 55, 0.5);
+    color: #4a2c1d;
+    font-size: 12px;
+    width: fit-content;
+    margin-left: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  }
 }

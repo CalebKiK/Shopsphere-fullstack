@@ -59,3 +59,31 @@
     font-weight: 700;
     text-align: left; 
   }
+
+  @media (max-width: 450px) {
+    .item-card {
+      padding: 10px;
+      border-radius: 10px;
+      width: 160px;
+    }
+    
+    /* Image Styles */
+    .item-card img {
+      height: 130px;
+      min-width: 120px;
+      max-width: 140px;
+    }
+    
+    /* Button Styles */
+    .item-card button {
+      font-size: 14px;
+    }
+    
+    .item-card button:hover {
+      padding: 5px 10px;
+    }
+    
+    .item-card h4 {
+      font-weight: 600; 
+    }
+  }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 function CartItem({ item, onRemoveFromCart, inCart}) {
 

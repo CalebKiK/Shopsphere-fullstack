@@ -1,6 +1,6 @@
 /* Styles for the main container */
 .clothes-section {
-  padding: 20px;
+  padding: 40px 20px;
   background-color: #f8f0e8;
   margin: 0px 160px;
   border-radius: 20px;
@@ -8,10 +8,10 @@
 }
 
 .clothes-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 24px;
-  color: #333;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: left;
+  margin: 0px 20px 20px;
 }
 
 /* Grid layout for clothes items */
@@ -127,5 +127,12 @@
 @media(max-width: 450px) {
   .clothes-section {
     margin: 0px 10px;
+    padding: 40px 10px;
+  }
+
+  .clothes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }

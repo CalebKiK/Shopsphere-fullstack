@@ -1,6 +1,6 @@
 /* Styles for the main container */
 .whats-new{
-  padding: 20px;
+  padding: 40px 20px;
   background-color: #F8F0E8; /* Background color for the section */
   margin: 30px 160px;
   border-radius: 20px;
@@ -12,11 +12,11 @@
   background-color: #F8F0E8; /* Background color for the section */
 }
 
-.WhatsNew-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 24px;
-  color: #333;
+.whats-new h2 {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 20px;
 }
 
 /* Grid layout for new product items */
@@ -78,6 +78,13 @@
 
 @media(max-width: 450px) {
   .whats-new{
+    padding: 40px 10px 0px 0px;
     margin: 30px 10px;
+  }
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }

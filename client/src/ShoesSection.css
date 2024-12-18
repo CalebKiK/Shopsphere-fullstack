@@ -4,7 +4,15 @@
   padding: 40px 20px;
   margin: 40px auto;
   max-width: 1200px;
+  text-align: left;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.shoes-section h2{
+  font-size: 25px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 20px;
 }
 
 /* Grid layout for shoes cards */

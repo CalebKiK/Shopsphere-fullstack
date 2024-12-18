@@ -15,6 +15,10 @@
   z-index: 5;
 }
 
+.shopsphere-header-mobile{
+  display: none;
+}
+
 .shopsphere-header-left-section {
   width: 180px;
 }
@@ -55,7 +59,6 @@
   flex: 1;
   width: 400px;
   font-size: 16px;
-  padding-top: 5px;
   height: 40px;
   padding-left: 20px;
   border: none;
@@ -155,86 +158,55 @@
   margin-right: 8px;
 }
 
-/* Base styles for forms */
-.form-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+.sign-in-modal{
+  margin-top: 130px;
+}
+
+.signin-form{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin: 10px 500px;
+}
+
+.signin-form-header{
+  display: flex;
   align-items: center;
-  z-index: 1000;
-}
-
-.form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.form h2 {
-  margin-bottom: 20px;
   text-align: center;
-  color: #333;
+  justify-content: center;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-button {
-  width: 70%;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  /* background-color: #f3f3f4; */
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color:  #86afca;;
-}
-
-p {
-  text-align: center;
-  margin-top: 10px;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-.error-message {
+.signin-form-close{
+  background-color: rgb(255, 247, 247);
+  border: 1px red solid;
+  height: 25px;
+  border-radius: 5px;
+  margin-left: 100px;
   color: red;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
+}
+
+.signin-form-close:hover{
+  background-color: rgb(255, 178, 178);
+}
+
+.signin-form input{
+  margin: 15px 20px;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 1px black solid;
+}
+
+.signin-form button{
+  margin: 15px 20px;
+}
+
+.signin-form-signin{
+  width: fit-content;
+  padding: 10px 30px;
+  border: 1px black soild;
+  border-radius: 10px;
+  background-color: rgb(250, 203, 142);
+  margin-left: 200px;
 }
 
 @media (max-width: 800px) {
@@ -256,12 +228,152 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-  .shopsphere-header {
-    padding-left: 15px;
-    padding-right: 15px;
+  .shopsphere-header-mobile {
+    background-color: #402013;
+    color: white;
+    max-width: 450px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 5;
+  }
+  
+  .shopsphere-header{
+    display: none;
+  }
+
+  .shopsphere-header-left-section {
+    width: 180px;
   }
 
   .shopsphere-header-left-section h2{
-    font-size: 25px;
+    font-size: 20px;
+    margin-left: -50px;
   }
+
+  .shopsphere-header-right-section {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    margin-right: 40px;
+    margin-left: -200px;
+    align-items: center; 
+    justify-content: space-between;
+  }
+
+  .cart-link {
+    padding: 0px 10px;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  
+  .cart-icon {
+    width: 20px;
+  }
+  
+  .cart-text {
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .cart-quantity {
+    font-size: 11px;
+    font-weight: 500;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 26px;
+    text-align: center;
+  }
+
+  .signup-button, .help-button {
+    padding: 8px 10px;
+    margin-left: 0px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .help-icon {
+    width: 20px; 
+    margin-right: 8px;
+  }
+  
+  .sign-in-modal{
+    margin-top: 100px;
+    margin-bottom: -30px;
+  }
+  
+  .signin-form{
+    margin: 10px 40px;
+  }
+  
+  .signin-form-close{
+    height: 20px;
+  }
+  
+  .signin-form input{
+    margin: 15px 20px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+  }
+  
+  .signin-form button{
+    margin: 15px 20px;
+  }
+  
+  .signin-form-signin{
+    width: fit-content;
+    padding: 10px 30px;
+    border: 1px black soild;
+    border-radius: 10px;
+    background-color: rgb(250, 203, 142);
+    margin-left: 200px;
+  }
+
+  .shopsphere-header-middle-section {
+    flex: 1;
+    max-width: 850px;
+    margin: 20px 50px 0px 50px;
+    display: flex;
+  }
+
+  .shopsphere-header-middle-section form{
+    display: flex;
+  }
+
+  .search-bar {
+    flex: 1;
+    width: 200px;
+    font-size: 13px;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .search-button {
+    width: 55px;
+    height: 29px;
+    border-radius: 0px 10px 10px 0px;
+    flex-shrink: 0;
+  }
+
+  .search-icon {
+    height: 16px;
+  }
+  
 }
